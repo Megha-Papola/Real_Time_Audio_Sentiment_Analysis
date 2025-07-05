@@ -46,6 +46,13 @@ audio_emotion_recognition/
 | `numpy`/`pandas` | Data manipulation             |
 
 ---
+## Dataset
+Dataset Name	Description
+CREMA-D	7,442 clips from 91 actors, with emotions: anger, disgust, fear, happy, neutral, and sad
+TESS	2,800 recordings from 2 female actors (7 emotions: happy, sad, angry, fear, disgust, pleasant surprise, neutral)
+SAVEE	480 recordings from 4 male actors with 7 emotions
+Custom	Preprocessed and augmented audio clips with extracted features (saved in features.csv)
+
 
 ##  Model Overview
 
