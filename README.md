@@ -132,6 +132,9 @@ Feel free to fork the repository, raise issues, or submit pull requests!
 ##  Authors
 
 * Megha Papola
+* Tanuja Bisht
+* Purvi Joshi
+* Esha Danu
 
 ---
 
