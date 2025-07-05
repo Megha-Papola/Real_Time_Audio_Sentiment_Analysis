@@ -47,11 +47,15 @@ audio_emotion_recognition/
 
 ---
 ## Dataset
-Dataset Name	Description
-CREMA-D	7,442 clips from 91 actors, with emotions: anger, disgust, fear, happy, neutral, and sad
-TESS	2,800 recordings from 2 female actors (7 emotions: happy, sad, angry, fear, disgust, pleasant surprise, neutral)
-SAVEE	480 recordings from 4 male actors with 7 emotions
-Custom	Preprocessed and augmented audio clips with extracted features (saved in features.csv)
+This project uses a combination of publicly available emotional speech datasets to train and evaluate the model:
+
+* **CREMA-D (Crowd-sourced Emotional Multimodal Actors Dataset):** Contains 7,442 audio clips from 91 actors. Emotions include anger, disgust, fear, happiness, neutral, and sadness. The recordings vary in sentence structure and intensity, providing diversity in speech patterns and emotional expression.
+
+* **TESS (Toronto Emotional Speech Set):** Comprises 2,800 recordings spoken by 2 female actors, portraying seven emotions — happy, sad, angry, fear, disgust, pleasant surprise, and neutral. It is widely used for benchmarking emotional speech models.
+
+* **SAVEE (Surrey Audio-Visual Expressed Emotion):** Includes 480 samples from 4 male speakers, each expressing 7 distinct emotions. This dataset adds variety in gender and expression.
+
+* **Custom Preprocessed Dataset:** Features from the above datasets were extracted and stored in features.csv, including Zero Crossing Rate, MFCCs, Chroma, RMS Energy, and more. This processed data is used for training and inference within the app.
 
 
 ##  Model Overview
