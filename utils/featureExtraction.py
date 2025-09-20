@@ -9,7 +9,6 @@ from tqdm import tqdm
 
 def extract_features(file_path):
     try:
-        # Load audio inside the function
         data, sample_rate = librosa.load(file_path, duration=3, offset=0.5)
 
         n_fft = 512
@@ -55,19 +54,19 @@ def get_emotion_label(file_path):
     if "tess" in file_path.lower():
         parts = file_name.split("_")
         if len(parts) >= 3:
-            return parts[-1].replace(".wav", "")  # e.g., "happy"
+            return parts[-1].replace(".wav", "") 
 
     # RAVDESS
     elif "ravdess" in file_path.lower():
-        return file_name.split("-")[2]  # e.g., '03'
+        return file_name.split("-")[2] 
 
     # CREMA-D
     elif "crema" in file_path.lower():
-        return file_name.split("_")[-1].replace(".wav", "")  # e.g., "ANG"
+        return file_name.split("_")[-1].replace(".wav", "")  
 
     # SAVEE
     elif "savee" in file_path.lower():
-        return file_name[-6:-4]  # e.g., "sa" for sad
+        return file_name[-6:-4] 
 
     else:
         return "unknown"
@@ -90,9 +89,9 @@ def save_to_csv(features_with_labels, output_path="features.csv"):
     n_features = df.shape[1] - 1
     df.columns = [str(i) for i in range(1, n_features + 1)] + ['emotion']
     df.to_csv(output_path, index=False)
-    print(f"✅ Features saved to {output_path}")
+    print(f"Features saved to {output_path}")
 
 if __name__ == "__main__":
-    data_dir = "audioFiles"  # replace with your path
+    data_dir = "audioFiles" 
     features_with_labels = process_directory_parallel(data_dir)
     save_to_csv(features_with_labels, output_path="dataset/features.csv")

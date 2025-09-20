@@ -1,4 +1,4 @@
-# 🎙️ Audio Emotion Recognition
+#  Audio Emotion Recognition
 
 A Streamlit-based web application that predicts the emotion expressed in a short speech audio clip using machine learning and deep audio features.
 
